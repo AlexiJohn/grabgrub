@@ -1,1 +1,1 @@
-web: GrabGrub-Build3/GrabGrub/manage.py runserver 0.0.0.0:$PORT --noreload
+web: gunicorn GrabGrub-Build3.GrabGrub.GrabGrubg.wsgi --log-file -
