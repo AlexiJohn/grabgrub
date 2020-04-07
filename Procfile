@@ -1,1 +1,1 @@
-web: gunicorn GrabGrub-Build3.GrabGrub.GrabGrubg.wsgi --log-file -
+web: gunicorn GrabGrub-Build3.GrabGrub.GrabGrub.wsgi --log-file -
