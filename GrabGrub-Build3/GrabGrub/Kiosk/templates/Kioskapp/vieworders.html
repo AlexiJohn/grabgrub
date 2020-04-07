@@ -1,0 +1,43 @@
+{% extends 'Kioskapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-12">
+    <div class="mx-auto w-75">
+        <div>
+            <h2> Orders </h2>
+        </div>
+        <table class="table_ours mb-2">
+            <thead>
+                <th scope="col"> Order Number (PK) </th>
+                <th scope="col"> Ordered by </th>
+                <th scope="col"> Food </th>
+                <th scope="col"> Total </th>
+                <th scope="col"> Mode of Payment </th>
+                <th class="text-center"scope="col"> Actions </th>
+            </thead>
+            <tbody>
+                {% for o, s in o_s_list %}
+                <tr>
+                    <td> {{ o.pk }} </td>
+                    <td> {{ o.ord.cust_order.name }} </td>
+                    <td> {{ o.food.food_name }} </td>
+                    <td> {{ s }} </td>
+                    <td> {{ o.ord.mode_payment }} </td>
+                    <td>
+                        <div class="d-flex justify-content-around">
+                            <a href="{% url 'edit_order' pk=o.pk %}"  class="btn btn-dark">Edit</a>
+                            <a href="{% url 'delete_order' pk=o.pk %}"  class="btn btn-dark">Delete</a>
+                        </div>
+                    </td>         
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-between ">
+            <a class='table_button_l my-0' href="{% url 'main_menu'%}"><span>Main Menu</span></a>
+            <a class='table_button my-0' href="{% url 'add_order'%}"><span>Add Order</span></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

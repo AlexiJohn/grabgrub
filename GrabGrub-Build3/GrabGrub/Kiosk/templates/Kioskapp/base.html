@@ -1,0 +1,52 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>GrabGrub</title>
+        <link rel="styelsheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" type="text/css"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" type="text/css">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/custom.css' %}">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/icons/apple-touch-icon.png'%}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static '/icons/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static '/icons/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static '/icons/site.webmanifest' %}">
+
+        <script src="{% static '/bootstrap/jquery-3.4.1.slim.min.js' %}"></script>
+        <script src="{% static '/bootstrap/popper.min.js' %}"></script>
+        <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+        <style>
+            @font-face {
+                font-family: 'Quicksand';
+                src: url({% static '/fonts/Quicksand-VariableFont_wght.ttf'%});
+                font-weight: '300';
+            }
+        </style>
+    </head>
+    <body class="background">
+        <nav class="navbar navbar-dark bg-custom mb-3 sticky-top main_title" style="background-color: rgb(49, 49, 49); border-bottom: 1px solid rgba(103, 103, 105, 0.465);">
+            <a class="navbar-brand mb-0" style='text-decoration: none; font-size: 50px; color: white'href="{% url 'main_menu' %}">
+                 <img class='img-fluid' width='35' height='35'src="{% static '/icons/apple-touch-icon.png' %}" alt='GrabGrub'> 
+            </a>
+
+        </nav>
+        <div class="container-fluid mx-auto" style="background-color:rgb(49, 49, 49);">
+            <div class="row" style="background-color:rgb(49, 49, 49);">
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        </div>  
+        
+        
+    </body>
+    <footer class="footer">
+
+        <!-- Copyright -->
+        <div class="container">&copy; 2020</div>
+        <!-- Copyright -->
+      
+    </footer>
+</html>

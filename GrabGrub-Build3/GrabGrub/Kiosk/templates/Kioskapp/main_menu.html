@@ -1,0 +1,17 @@
+{% extends 'Kioskapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-5 mx-auto">
+    <div class="card-header mx-auto">
+        <h3 class="text-center pt-3">G r a b G r u b</h3>
+    </div>
+    <div class="card-body" style="border: rgb(158, 158, 158); background-color:  rgb(48, 48, 48);">
+            <div style='display: flex; flex-direction: column;'>
+                <a class='main_button' href="{% url 'viewcustomers' %}"><span>View Customers</span></a>
+                <a class='main_button' href="{% url 'viewfood' %}"><span>View Food</span></a>
+                <a class='main_button' href="{% url 'vieworders' %}"><span>View Orders</span></a>
+            </div>
+    </div>
+</div>
+{% endblock %}

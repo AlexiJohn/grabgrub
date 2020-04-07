@@ -1,0 +1,42 @@
+{% extends 'Kioskapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-12" style="padding-bottom: 30px;">
+    <div class="mx-auto w-75">
+        <div class="card-header rounded">
+            <h2 class='basic_center mt-2 mb-0'> View orders of: <span style="text-decoration: underline;">{{c.name}}</span> </h2>
+        </div>
+        <div class="card-body rounded-bottom mb-0" style="background-color:  rgb(59, 59, 59);">
+            <table class="table_ours mb-2">
+                <thead>
+                    <th scope="col"> Order Number (PK) </th>
+                    <th scope="col"> Ordered By </th>
+                    <th scope="col"> Total </th>
+                    <th scope="col"> Mode of Payment </th>
+                    <th scope="col"> Ordered at </th>
+                </thead>
+                <tbody>
+                    {% for c, s in c_s_list %}
+                    <tr>
+                        <td> {{ c.pk }} </td>
+                        <td> {{ c.ord.cust_order.name }} </td>
+                        <td> {{ s }} </td>
+                        <td> {{ c.ord.mode_payment }} </td>
+                        <td> {{ c.ord.ordered_at }} </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class='container align-self-center mt-2 pt-2' > 
+                <div class="center w-25 my-0 py-0">
+                    <p class='text-center form-control my-0'>Total: {{ total }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <a class='table_button_l center' href="{% url 'viewcustomers'%}"><span>Back to Customers</span></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

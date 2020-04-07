@@ -1,0 +1,215 @@
+/* Font Families:
+font-family: 'Quicksand', sans-serif; 
+Colors:
+    Buttons Secondary: rgb(67, 67, 70)
+    Buttons Primary: #007bff    
+*/
+body{
+    background-color: rgb(49, 49, 49); 
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+}
+
+.main_title{
+    font-family: 'Quicksand',sans-serif;
+    font-weight: 100;
+}
+.main_button {
+    background-color: rgb(67, 67, 70);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    }
+.main_button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+    }
+
+.main_button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+.main_button:hover {
+    background-color: white;
+    color: rgb(67, 67, 70);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.3s;
+}
+.main_button:hover span {
+    padding-right: 25px;
+}
+
+.main_button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.bordering{
+    border: rgb(158, 158, 158);
+    background-color: rgba(255, 255, 255, 0);
+}
+.table_ours{
+    background-color: rgb(67, 67, 70);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.table_ours th {
+padding: 0.75rem;
+vertical-align: top;
+}
+.table_ours td {
+padding: 0.75rem;
+vertical-align: top;
+border-top: 1px solid rgba(103, 103, 105, 0.465);
+}
+
+.table_ours thead th {
+vertical-align: bottom;
+border-bottom: 1px solid rgba(103, 103, 105, 0.465);
+}
+
+.table_ours tbody + tbody {
+border-top: 1px solid rgb(49, 49, 49);
+}
+/* TABLE BUTTON LEFT ANIMATION */
+.table_button_l {
+    background-color: #007bff;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+.table_button_l span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+    }
+.table_button_l span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.3s;
+}
+.table_button_l:hover {
+    background-color: white;
+    color: rgb(67, 67, 70);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.table_button_l:hover span {
+    padding-left: 25px;
+}
+
+.table_button_l:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+.table_button_l.btn-secondary{
+    background-color: #545b62;
+}
+.table_button_l.btn-secondary:hover{
+    color: white;
+}
+/* TABLE BUTTON RIGHT ANIMATION */
+.table_button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+.table_button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+    }
+
+.table_button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+
+.table_button:hover {
+    background-color: white;
+    color: rgb(67, 67, 70);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.table_button:hover span {
+    padding-right: 25px;
+}
+
+.table_button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.center{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    align-self: center;
+}
+
+.background{
+    background-color: rgb(49, 49, 49);
+}
+.card_ours{
+    background-color: rgb(67, 67, 70);
+    color: white;
+    border-radius: 12px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+}
+
+.basic_center{
+    text-align: center;
+}
+
+.rounded_cust{
+    border-radius: 0.25vw;
+}
