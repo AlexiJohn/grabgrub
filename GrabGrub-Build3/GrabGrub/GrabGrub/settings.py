@@ -11,11 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import dj_database_url
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -24,9 +23,9 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 SECRET_KEY = '9z3zy5(b!k@a6vs$_=5i$&j=3o$itx0mel#h4w9=6@2ugc&0%u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '180.191.139.66']
 
 
 # Application definition
@@ -82,6 +81,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+DATABASES['default'].update(db_from_env)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+db_from_env = dj_database_url.config(conn_max_age=500)
 
 
 # Password validation
@@ -123,5 +125,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-import django_heroku
 django_heroku.settings(locals())
