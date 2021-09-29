@@ -39,3 +39,17 @@ Install libraries from from `requirements.txt`
 ```bash
 pip install -r requirements.txt
 ```
+
+# Running the app using Docker
+
+First, build the Docker image using the following command:
+
+```bash
+docker build -t grab_grub_dev .
+```
+
+Then, run the Docker image as a container in detached mode using the following command:
+
+```bash
+docker run -p 8080:8080 -d grab_grub_dev
+```
